@@ -19,14 +19,6 @@ public class NumberGuessGame implements GameInterface {
     private List<NumberGuessPlayer> players = new ArrayList<>();
 
 
-    public NumberGuessGame(List<NumberGuessPlayer> players) {
-        this.players.addAll(players);
-    }
-    
-
-    public NumberGuessGame(){
-
-    }
 
     public int generateRandomNum(){
         randNumber = rand.nextInt(10)+1;
@@ -73,11 +65,12 @@ public class NumberGuessGame implements GameInterface {
     @Override
     public void addPlayer(PlayerInterface player) {
         players.add((NumberGuessPlayer) player);
+
     }
 
     @Override
     public void removePlayer() {
-
+        //players.remove()
     }
 
     @Override
@@ -93,6 +86,7 @@ public class NumberGuessGame implements GameInterface {
             }
         }
     }
+
 
 
 }
